@@ -1,0 +1,94 @@
+#!/usr/bin/env bash
+tulparDir="$( cd -- "$(dirname "$0/")" >/dev/null 2>&1 ; pwd -P )"
+projectDir="$( cd -- "$(dirname "$tulparDir/../../")" >/dev/null 2>&1 ; pwd -P )"
+libFolder="$projectDir/lib"
+
+## RENAME APP
+app:install() {
+    sh "$tulparDir/bin/app-install.sh" $tulparDir $projectDir $libFolder
+}
+
+## Create Module
+create:module() {
+    name=$(echo $1 | sed 's/[[:upper:]]/_&/g;s/^_//' | tr '[:upper:]' '[:lower:]')
+    moduleFolder="$libFolder/modules/$name"
+
+    if test -d "$moduleFolder"; then
+      echo "$moduleFolder exists."
+      exit;
+    fi
+
+    cp -R "$projectDir/.stubs/modules" "$moduleFolder"
+
+    find $moduleFolder -type f -name 'flutteravel_stumb_*' | while read FILE ; do
+        newfile="$(echo ${FILE} |sed -e "s/flutteravel_stumb_/$name\_/")" ;
+        mv "${FILE}" "${newfile}" ;
+    done 
+
+
+    find $moduleFolder -type f -name '*.dart' | while read FILE ; do
+        sed  -i '' -e "s/FlutteravelStumb/$1/g" $FILE
+        sed  -i '' -e "s/flutteravel_stumb_/$name\_/g" $FILE
+    done 
+}
+
+## Create Helper
+create:helper() {
+    name=$(echo $1 | sed 's/[[:upper:]]/_&/g;s/^_//' | tr '[:upper:]' '[:lower:]')
+    fileName="$libFolder/core/utils/"$name"_helper.dart"
+    
+    if test -f "$fileName"; then
+        echo "$fileName exists."
+        exit;
+    fi
+
+    touch $fileName
+    echo "class $1Helper {}" > $fileName
+}
+
+premium:one() {
+    moduleFolder="$libFolder/modules/premium_one"
+
+    if test -d "$moduleFolder"; then
+      echo "$moduleFolder exists."
+      exit;
+    fi
+
+    cp -R "$projectDir/.stubs/premium_one" "$moduleFolder"
+
+    if test ! -d "$libFolder/assets/html/premium_one"; then
+      echo  "$libFolder/assets/html/premium_one created."
+      mkdir -p "$libFolder/assets/html/premium_one"
+    fi
+
+    if test ! -d "$libFolder/assets/images/premium_one"; then
+      echo  "$libFolder/assets/images/premium_one created."
+      mkdir -p "$libFolder/assets/images/premium_one"
+    fi
+
+    mv "$moduleFolder/assets/html/premium_one" "$libFolder/assets/html/"
+    mv "$moduleFolder/assets/images/premium_one" "$libFolder/assets/images/"
+
+    rm -rf "$moduleFolder/assets"
+
+    echo "Premium One Paywall Installed!"
+}
+
+
+create:onboarding() {
+    moduleFolder="$libFolder/modules/onboarding"
+
+    if test -d "$moduleFolder"; then
+      echo "$moduleFolder exists."
+      exit;
+    fi
+
+    cp -R "$projectDir/.stubs/onboarding" "$moduleFolder"
+
+    echo "Please edit core/routes/pages.dart"
+    echo "Please edit core/routes/routes.dart"
+    echo "Please edit init.dart"
+    echo "Onboarding Installed!"
+}
+
+"$@"
