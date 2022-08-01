@@ -4,10 +4,11 @@ projectDir=$2
 libFolder=$3
 
 
-##if test -f "$tulparFolder/.installed"; then
-    ##echo "Project already installed..."
-    ##exit;
-##fi
+if test -f "$tulparDir/.installed"; then
+    echo "Project already installed..."
+    exit;
+fi
+
 echo "Installing app..."
 
 createStructer() {
@@ -18,8 +19,7 @@ createStructer() {
     while read folderName; do
         if test -d "$libFolder/$folderName"
         then
-            echo
-            #echo "$libFolder/$folderName exists."
+            echo "$libFolder/$folderName exists."
         else
             mkdir -p "$libFolder/$folderName"
         fi
@@ -31,8 +31,7 @@ createStructer() {
 
         if test -f "$libFolder/$fileName"
         then
-            echo
-            #echo "$libFolder/$folderName exists."
+            echo "$libFolder/$fileName exists."
         else
             echo "Copying $fileName from gist..."
             mkdir -p "$(dirname "$libFolder/$fileName")"
@@ -73,6 +72,6 @@ createStructer
 
 flutter packages pub run build_runner build
 
-touch "$tulparFolder/.installed"
+touch "$tulparDir/.installed"
 echo "Created .installed file"
 echo "Installed app! Done!"
