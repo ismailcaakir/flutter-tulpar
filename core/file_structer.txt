@@ -14,6 +14,7 @@ routes/routes.dart|https://raw.githubusercontent.com/ismailcaakir/flutter-tulpar
 ui/components/loader.dart|https://raw.githubusercontent.com/ismailcaakir/flutter-tulpar-gist/master/ui/components/loader.dart
 ui/screens/error_screen/error_screen.dart|https://raw.githubusercontent.com/ismailcaakir/flutter-tulpar-gist/master/ui/screens/error_screen/error_screen.dart
 ui/screens/splash_screen/splash_screen.dart|https://raw.githubusercontent.com/ismailcaakir/flutter-tulpar-gist/master/ui/screens/splash_screen/splash_screen.dart
+ui/screens/onboarding_screen/onboarding_screen.dart|https://raw.githubusercontent.com/ismailcaakir/flutter-tulpar-gist/master/ui/screens/onboarding_screen/onboarding_screen.dart
 init.dart|https://raw.githubusercontent.com/ismailcaakir/flutter-tulpar-gist/master/init.dart
 di.dart|https://raw.githubusercontent.com/ismailcaakir/flutter-tulpar-gist/master/init.dart
 main.dart|https://raw.githubusercontent.com/ismailcaakir/flutter-tulpar-gist/master/main.dart
