@@ -16,6 +16,6 @@ ui/screens/error_screen/error_screen.dart|https://raw.githubusercontent.com/isma
 ui/screens/splash_screen/splash_screen.dart|https://raw.githubusercontent.com/ismailcaakir/flutter-tulpar-gist/master/ui/screens/splash_screen/splash_screen.dart
 ui/screens/onboarding_screen/onboarding_screen.dart|https://raw.githubusercontent.com/ismailcaakir/flutter-tulpar-gist/master/ui/screens/onboarding_screen/onboarding_screen.dart
 init.dart|https://raw.githubusercontent.com/ismailcaakir/flutter-tulpar-gist/master/init.dart
-di.dart|https://raw.githubusercontent.com/ismailcaakir/flutter-tulpar-gist/master/init.dart
+di.dart|https://raw.githubusercontent.com/ismailcaakir/flutter-tulpar-gist/master/di.dart
 main.dart|https://raw.githubusercontent.com/ismailcaakir/flutter-tulpar-gist/master/main.dart
 ##ENDOFFILE##
