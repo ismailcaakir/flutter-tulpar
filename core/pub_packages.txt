@@ -17,7 +17,6 @@ go_router
 easy_localization
 flutter_riverpod
 riverpod
-shared_preferences
 get_it
 injectable
 build_runner --dev
