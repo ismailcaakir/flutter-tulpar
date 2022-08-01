@@ -71,6 +71,7 @@ installPubPackages() {
 installPubPackages
 createStructer
 
+flutter packages pub run build_runner build
 
 touch "$tulparFolder/.installed"
 echo "Created .installed file"
