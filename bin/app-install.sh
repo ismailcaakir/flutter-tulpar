@@ -6,6 +6,7 @@ libFolder=$3
 
 if test -f "$tulparDir/.installed"; then
     echo "Project already installed..."
+    echo "$projectDir"
     exit;
 fi
 
@@ -14,14 +15,14 @@ echo "Installing app..."
 createStructer() {
     echo "Creating structure..."
 
-    rm -rf  "$libFolder/assets"  "$libFolder/components"  "$libFolder/core" "$libFolder/routes"
+    ## rm -rf  "$libFolder/assets"  "$libFolder/components"  "$libFolder/core" "$libFolder/routes"
 
     while read folderName; do
-        if test -d "$libFolder/$folderName"
+        if test -d "$projectDir/$folderName"
         then
-            echo "$libFolder/$folderName exists."
+            echo "$projectDir/$folderName exists."
         else
-            mkdir -p "$libFolder/$folderName"
+            mkdir -p "$projectDir/$folderName"
         fi
     done < "$tulparDir/core/folder_structer.txt"
 
@@ -29,14 +30,14 @@ createStructer() {
     while read fileData; do
         IFS="|" read -r fileName gistUrl <<< "${fileData}"
 
-        if test -f "$libFolder/$fileName"
+        if test -f "$projectDir/$fileName"
         then
-            echo "$libFolder/$fileName exists."
+            echo "$projectDir/$fileName exists."
         else
-            echo "Copying $fileName from gist..."
-            mkdir -p "$(dirname "$libFolder/$fileName")"
-            touch "$libFolder/$fileName"
-            curl -s -L "$gistUrl" > "$libFolder/$fileName"
+            echo "Copying $projectDir from gist..."
+            mkdir -p "$(dirname "$projectDir/$fileName")"
+            touch "$projectDir/$fileName"
+            curl -s -L "$gistUrl" > "$projectDir/$fileName"
         fi
         
     done < "$tulparDir/core/file_structer.txt"
