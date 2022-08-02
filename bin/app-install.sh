@@ -17,6 +17,8 @@ createStructer() {
 
     ## rm -rf  "$libFolder/assets"  "$libFolder/components"  "$libFolder/core" "$libFolder/routes"
 
+    rm -rf "$libFolder/main.dart"
+
     while read folderName; do
         if test -d "$projectDir/$folderName"
         then
@@ -34,7 +36,7 @@ createStructer() {
         then
             echo "$projectDir/$fileName exists."
         else
-            echo "Copying $projectDir from gist..."
+            echo "Copying $fileName from gist..."
             mkdir -p "$(dirname "$projectDir/$fileName")"
             touch "$projectDir/$fileName"
             curl -s -L "$gistUrl" > "$projectDir/$fileName"
@@ -74,5 +76,7 @@ createStructer
 flutter packages pub run build_runner build
 
 touch "$tulparDir/.installed"
+echo "Installed app... " > "$tulparDir/.installed"
+echo "$(date)" >> "$tulparDir/.installed"
 echo "Created .installed file"
 echo "Installed app! Done!"
