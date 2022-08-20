@@ -12,6 +12,10 @@ lib/core/config
 lib/core/themes
 lib/core/utils
 lib/core/constants
+lib/core/exceptions
+lib/core/services
+lib/core/services/storage
+lib/core/models
 lib/routes
 lib/ui
 lib/ui/components

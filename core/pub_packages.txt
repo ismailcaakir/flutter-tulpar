@@ -22,4 +22,7 @@ purchases_flutter
 modal_bottom_sheet
 build_runner --dev
 injectable_generator --dev
+hive
+hive_flutter
+hive_test --dev
 ##ENDOFFILE

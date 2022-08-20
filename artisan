@@ -1,11 +1,16 @@
 #!/usr/bin/env bash
 tulparDir="$( cd -- "$(dirname "$0/")" >/dev/null 2>&1 ; pwd -P )"
 projectDir="$( cd -- "$(dirname "$tulparDir/../../")" >/dev/null 2>&1 ; pwd -P )"
-libFolder="$projectDir/lib"
+libFolder="$( cd -- "$(dirname "$projectDir/lib")" >/dev/null 2>&1 ; pwd -P )"
 
 ## RENAME APP
 app:install() {
     sh "$tulparDir/bin/app-install.sh" $tulparDir $projectDir $libFolder
+}
+
+## RENAME APP
+create:feature() {
+    sh "$tulparDir/bin/create-feature.sh" $tulparDir $projectDir $libFolder $1
 }
 
 "$@"

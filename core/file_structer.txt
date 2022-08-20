@@ -5,6 +5,9 @@ lib/core/constants/base_constants.dart|https://raw.githubusercontent.com/ismailc
 lib/core/constants/string_constants.dart|https://raw.githubusercontent.com/ismailcaakir/flutter-tulpar-gist/master/core/constants/string_constants.dart
 lib/core/constants/color_constants.dart|https://raw.githubusercontent.com/ismailcaakir/flutter-tulpar-gist/master/core/constants/color_constants.dart
 lib/core/constants/url_constants.dart|https://raw.githubusercontent.com/ismailcaakir/flutter-tulpar-gist/master/core/constants/url_constants.dart
+lib/core/services/storage/hive_storage_service.dart|https://raw.githubusercontent.com/ismailcaakir/flutter-tulpar-gist/master/core/services/storage/hive_storage_service.dart
+lib/core/services/storage/storage_service_provider.dart|https://raw.githubusercontent.com/ismailcaakir/flutter-tulpar-gist/master/core/services/storage/storage_service_provider.dart
+lib/core/services/storage/storage_service.dart|https://raw.githubusercontent.com/ismailcaakir/flutter-tulpar-gist/master/core/services/storage/storage_service.dart
 lib/core/themes/themes.dart|https://raw.githubusercontent.com/ismailcaakir/flutter-tulpar-gist/master/core/themes/themes.dart
 lib/core/themes/text_theme.dart|https://raw.githubusercontent.com/ismailcaakir/flutter-tulpar-gist/master/core/themes/text_theme.dart
 lib/core/themes/app_bar_theme.dart|https://raw.githubusercontent.com/ismailcaakir/flutter-tulpar-gist/master/core/themes/app_bar_theme.dart
