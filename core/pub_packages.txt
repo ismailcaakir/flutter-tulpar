@@ -1,13 +1,12 @@
 firebase_core
 firebase_auth
 firebase_remote_config
+firebase_analytics
 app_tracking_transparency
-flutter_easyloading
 google_fonts
 flutter_svg
 url_launcher
 dio
-flutter_easyrefresh
 lottie
 shared_preferences
 onesignal_flutter
@@ -19,6 +18,8 @@ flutter_riverpod
 riverpod
 get_it
 injectable
+purchases_flutter
+modal_bottom_sheet
 build_runner --dev
 injectable_generator --dev
 ##ENDOFFILE

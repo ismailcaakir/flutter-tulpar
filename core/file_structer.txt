@@ -11,9 +11,9 @@ lib/core/themes/app_bar_theme.dart|https://raw.githubusercontent.com/ismailcaaki
 lib/core/themes/bottom_navigation_bar_theme.dart|https://raw.githubusercontent.com/ismailcaakir/flutter-tulpar-gist/master/core/themes/bottom_navigation_bar_theme.dart
 lib/core/themes/button_theme.dart|https://raw.githubusercontent.com/ismailcaakir/flutter-tulpar-gist/master/core/themes/button_theme.dart
 lib/core/app.dart|https://raw.githubusercontent.com/ismailcaakir/flutter-tulpar-gist/master/core/app.dart
-lib/locales/en.json|https://raw.githubusercontent.com/ismailcaakir/flutter-tulpar-gist/master/locales/en.json
-lib/locales/en-US.json|https://raw.githubusercontent.com/ismailcaakir/flutter-tulpar-gist/master/locales/en-US.json
-lib/locales/tr-TR.json|https://raw.githubusercontent.com/ismailcaakir/flutter-tulpar-gist/master/locales/tr-TR.json
+assets/locales/en.json|https://raw.githubusercontent.com/ismailcaakir/flutter-tulpar-gist/master/locales/en.json
+assets/locales/en-US.json|https://raw.githubusercontent.com/ismailcaakir/flutter-tulpar-gist/master/locales/en-US.json
+assets/locales/tr-TR.json|https://raw.githubusercontent.com/ismailcaakir/flutter-tulpar-gist/master/locales/tr-TR.json
 lib/routes/router.dart|https://raw.githubusercontent.com/ismailcaakir/flutter-tulpar-gist/master/routes/router.dart
 lib/routes/pages.dart|https://raw.githubusercontent.com/ismailcaakir/flutter-tulpar-gist/master/routes/pages.dart
 lib/ui/components/loader.dart|https://raw.githubusercontent.com/ismailcaakir/flutter-tulpar-gist/master/ui/components/loader.dart
