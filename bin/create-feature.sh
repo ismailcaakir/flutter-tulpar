@@ -15,4 +15,17 @@ if test -d "$featureFolder"; then
     exit;
 fi
 
+echo "Creating feature folder... $featureFolder"
+
+
+
 mkdir -p "$featureFolder"
+
+while read folderName; do
+    if test -d "$featureFolder/$folderName"
+    then
+        echo "$featureFolder/$folderName exists."
+    else
+        mkdir -p "$featureFolder/$folderName"
+    fi
+done < "$tulparDir/core/feature_folder_structer.txt"

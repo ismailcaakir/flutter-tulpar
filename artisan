@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 tulparDir="$( cd -- "$(dirname "$0/")" >/dev/null 2>&1 ; pwd -P )"
 projectDir="$( cd -- "$(dirname "$tulparDir/../../")" >/dev/null 2>&1 ; pwd -P )"
-libFolder="$( cd -- "$(dirname "$projectDir/lib")" >/dev/null 2>&1 ; pwd -P )"
+libFolder="$projectDir/lib"
 
 ## RENAME APP
 app:install() {
