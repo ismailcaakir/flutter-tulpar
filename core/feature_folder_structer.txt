@@ -1,6 +1,4 @@
 repositories
-enums
-models
 providers
 views
 views/pages
